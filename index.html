@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>VoiceNote AI - Smart Voice Notes</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        VoiceNote AI
+    </div>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#create">Create Note</a>
+        <a href="#notes">My Notes</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="tag">
+            TEXT & SPEECH ANALYSIS
+        </span>
+
+        <h1>
+            Speak It.
+            <span>Organize It.</span>
+        </h1>
+
+        <p>
+            Turn your voice into organized notes with automatic
+            category, priority and keyword detection.
+        </p>
+
+        <a href="#create" class="hero-btn">
+            Create Voice Note
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- DASHBOARD -->
+
+<section class="dashboard" id="dashboard">
+
+    <div class="section-title">
+
+        <h2>
+            Smart Notes Dashboard
+        </h2>
+
+        <p>
+            Manage and organize your voice notes easily.
+        </p>
+
+    </div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                N
+            </div>
+
+            <h3 id="totalNotes">
+                0
+            </h3>
+
+            <p>
+                Total Notes
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                T
+            </div>
+
+            <h3 id="taskNotes">
+                0
+            </h3>
+
+            <p>
+                Tasks
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                R
+            </div>
+
+            <h3 id="reminderNotes">
+                0
+            </h3>
+
+            <p>
+                Reminders
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                I
+            </div>
+
+            <h3 id="ideaNotes">
+                0
+            </h3>
+
+            <p>
+                Ideas
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CREATE NOTE -->
+
+<section class="create-section" id="create">
+
+    <div class="section-title">
+
+        <h2>
+            Create Smart Note
+        </h2>
+
+        <p>
+            Speak or type your note and let VoiceNote AI organize it.
+        </p>
+
+    </div>
+
+
+    <div class="note-container">
+
+
+        <div class="input-card">
+
+            <div class="card-header">
+
+                <h3>
+                    Your Note
+                </h3>
+
+                <span id="recordStatus">
+                    Ready
+                </span>
+
+            </div>
+
+
+            <textarea
+                id="noteInput"
+                placeholder="Type your note or click Start Speaking..."
+            ></textarea>
+
+
+            <div class="button-group">
+
+                <button
+                    id="startBtn"
+                    class="primary-btn"
+                >
+                    🎤 Start Speaking
+                </button>
+
+
+                <button
+                    id="stopBtn"
+                    class="stop-btn"
+                >
+                    Stop
+                </button>
+
+
+                <button
+                    id="analyzeBtn"
+                    class="analyze-btn"
+                >
+                    Analyze Note
+                </button>
+
+            </div>
+
+
+            <div
+                id="analysisBox"
+                class="analysis-box"
+            >
+
+                <div>
+                    <strong>Category:</strong>
+
+                    <span id="categoryResult">
+                        Not analyzed
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong>Priority:</strong>
+
+                    <span id="priorityResult">
+                        Not analyzed
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong>Keywords:</strong>
+
+                    <span id="keywordResult">
+                        Not analyzed
+                    </span>
+                </div>
+
+            </div>
+
+
+            <button
+                id="saveBtn"
+                class="save-btn"
+            >
+                Save Note
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NOTES -->
+
+<section class="notes-section" id="notes">
+
+    <div class="section-title">
+
+        <h2>
+            My Smart Notes
+        </h2>
+
+        <p>
+            Search and filter your saved notes.
+        </p>
+
+    </div>
+
+
+    <div class="controls">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search notes..."
+        >
+
+
+        <select id="categoryFilter">
+
+            <option value="All">
+                All Categories
+            </option>
+
+            <option value="Task">
+                Tasks
+            </option>
+
+            <option value="Reminder">
+                Reminders
+            </option>
+
+            <option value="Idea">
+                Ideas
+            </option>
+
+            <option value="Meeting">
+                Meetings
+            </option>
+
+            <option value="General">
+                General
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div
+        id="notesContainer"
+        class="notes-grid"
+    ></div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 VoiceNote AI | Smart Text & Speech Analysis
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
